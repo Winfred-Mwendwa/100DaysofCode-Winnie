@@ -1,3 +1,6 @@
+#This code captures a microphone input, stores it in a wavefile,
+#then transcribes, encrypts and decrypts it.
+
 import matplotlib.pyplot as plt
 import numpy as np
 import wave
@@ -38,7 +41,7 @@ wf.writeframes(b''.join(frames))
 wf.close()
 
 
-#Transcription
+#Transcription: Be sure to use a good microphone, otherwise this section returns an error
 filename = "micinput.wav"
 # initialize the recognizer
 r = sr.Recognizer()
